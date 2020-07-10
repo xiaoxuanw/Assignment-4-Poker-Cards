@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/player_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Player Name:"
+        android:textSize="12dp"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/player_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:text="name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/player_text"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="16dp"
+        android:text="wins:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/player_text"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/win_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="16dp"
+        android:text="num"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/player_text"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="16dp"
+        android:text="losses:"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/lose_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="16dp"
+        android:text="num"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Chips:"
+        android:textSize="12dp"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/player_text" />
+
+    <TextView
+        android:id="@+id/chips_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:text="num"
+        app:layout_constraintLeft_toRightOf="@id/chip"
+        app:layout_constraintTop_toBottomOf="@id/player_text" />
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Game Result: "
+        android:textSize="12dp"
+        app:layout_constraintLeft_toRightOf="@id/chips_text"
+        app:layout_constraintTop_toBottomOf="@id/player_text" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="Leaders"
+        android:id="@+id/leaders_button"
+        android:layout_marginTop="50dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/placeBetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="Place Bet"
+        android:layout_marginTop="100dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/deck"
+        android:layout_width="60dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="100dp"
+        android:tag="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <Button
+        android:id="@+id/newGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="160dp"
+        android:text="New Game"
+        android:layout_marginTop="100dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/card0"
+        android:layout_width="63dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="220dp"
+        android:tag="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/card1"
+        android:layout_width="58dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginLeft="136dp"
+        android:layout_marginTop="220dp"
+        android:tag="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/card2"
+        android:layout_width="53dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:tag="0"
+        app:layout_constraintTop_toBottomOf="@+id/dealerNewThree"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/card3"
+        android:layout_width="48dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="136dp"
+        android:tag="0"
+        app:layout_constraintTop_toBottomOf="@+id/dealerNewThree"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/dealerNewOne"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginLeft="232dp"
+        android:layout_marginTop="220dp"
+        android:tag="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <ImageView
+        android:id="@+id/dealerNewTwo"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginLeft="316dp"
+        android:layout_marginTop="216dp"
+        android:tag="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/dealerNewThree"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="316dp"
+        android:tag="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+      />
+
+
+    <ImageView
+        android:id="@+id/dealerNewFour"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginTop="316dp"
+        android:tag="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <ImageView
+        android:id="@+id/dealerNewFive"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginLeft="232dp"
+        android:layout_marginTop="316dp"
+        android:tag="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <ImageView
+        android:id="@+id/dealerNewSix"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginLeft="316dp"
+        android:layout_marginTop="316dp"
+        android:tag="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+      />
+
+    <ImageView
+        android:id="@+id/playerNewOne"
+        android:layout_width="48dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginLeft="232dp"
+        android:layout_marginTop="20dp"
+        android:tag="0"
+        app:layout_constraintTop_toBottomOf="@+id/dealerNewThree"
+        app:layout_constraintLeft_toLeftOf="parent"
+       />
+
+    <ImageView
+        android:id="@+id/playerNewTwo"
+        android:layout_width="48dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginLeft="316dp"
+        android:layout_marginTop="20dp"
+        android:tag="0"
+        app:layout_constraintTop_toBottomOf="@+id/dealerNewThree"
+        app:layout_constraintLeft_toLeftOf="parent"
+         />
+
+    <ImageView
+        android:id="@+id/playerNewThree"
+        android:layout_width="48dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="120dp"
+        android:tag="0"
+        app:layout_constraintTop_toBottomOf="@+id/dealerNewThree"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/playerNewFour"
+        android:layout_width="48dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="120dp"
+        android:tag="0"
+        app:layout_constraintTop_toBottomOf="@+id/dealerNewThree"
+        app:layout_constraintLeft_toLeftOf="parent"
+       />
+
+    <ImageView
+        android:id="@+id/playerNewFive"
+        android:layout_width="48dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginLeft="232dp"
+        android:layout_marginTop="120dp"
+        android:tag="0"
+        app:layout_constraintTop_toBottomOf="@+id/dealerNewThree"
+        app:layout_constraintLeft_toLeftOf="parent"
+         />
+
+    <ImageView
+        android:id="@+id/playerNewSix"
+        android:layout_width="48dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginLeft="316dp"
+        android:layout_marginTop="120dp"
+        android:tag="0"
+        app:layout_constraintTop_toBottomOf="@+id/dealerNewThree"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/betAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:hint="Bet Amount"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="Log Out"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
